@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 863,
+  "bbox_right": 91,
   "bbox_top": 0,
-  "bbox_bottom": 767,
+  "bbox_bottom": 47,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 960,
-  "height": 960,
+  "width": 92,
+  "height": 48,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"71009cd8-686f-45c3-9159-066f3dc3994f","path":"sprites/baMainTiles/baMainTiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"71009cd8-686f-45c3-9159-066f3dc3994f","path":"sprites/baMainTiles/baMainTiles.yy",},"LayerId":{"name":"d3ac4352-ef9f-47f8-845e-67053f0d76a9","path":"sprites/baMainTiles/baMainTiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"baMainTiles","path":"sprites/baMainTiles/baMainTiles.yy",},"resourceVersion":"1.0","name":"71009cd8-686f-45c3-9159-066f3dc3994f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"64a4fd9a-0ccf-4947-abf0-17c4162af5a1","path":"sprites/baGrass/baGrass.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"64a4fd9a-0ccf-4947-abf0-17c4162af5a1","path":"sprites/baGrass/baGrass.yy",},"LayerId":{"name":"338632e0-bfee-4f5d-9fe1-556c218d6a44","path":"sprites/baGrass/baGrass.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"baGrass","path":"sprites/baGrass/baGrass.yy",},"resourceVersion":"1.0","name":"64a4fd9a-0ccf-4947-abf0-17c4162af5a1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"baMainTiles","path":"sprites/baMainTiles/baMainTiles.yy",},
+    "spriteId": {"name":"baGrass","path":"sprites/baGrass/baGrass.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0ee373dc-a3ff-4935-bf6f-3776bccbecdb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"71009cd8-686f-45c3-9159-066f3dc3994f","path":"sprites/baMainTiles/baMainTiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1bd7db4d-1089-4740-b1d1-53830d366865","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"64a4fd9a-0ccf-4947-abf0-17c4162af5a1","path":"sprites/baGrass/baGrass.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"baMainTiles","path":"sprites/baMainTiles/baMainTiles.yy",},
+    "parent": {"name":"baGrass","path":"sprites/baGrass/baGrass.yy",},
     "resourceVersion": "1.3",
-    "name": "baMainTiles",
+    "name": "baGrass",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d3ac4352-ef9f-47f8-845e-67053f0d76a9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"338632e0-bfee-4f5d-9fe1-556c218d6a44","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Backgrounds",
-    "path": "folders/Backgrounds.yy",
+    "name": "floors",
+    "path": "folders/Backgrounds/floors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "baMainTiles",
+  "name": "baGrass",
   "tags": [],
   "resourceType": "GMSprite",
 }
