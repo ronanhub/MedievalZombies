@@ -13,8 +13,11 @@ if (input = -1) //KEYBOARD
 		var moveDirection = point_direction(0, 0, horMove, verMove);
 		//phy_position_x += lengthdir_x(moveSpeed, moveDirection);
 		//phy_position_y += lengthdir_y(moveSpeed, moveDirection);
-		phy_linear_velocity_x = lengthdir_x(moveSpeed, moveDirection);
-		phy_linear_velocity_y = lengthdir_y(moveSpeed, moveDirection);
+		if (point_distance(0, 0, phy_linear_velocity_x, phy_linear_velocity_y) < moveSpeed)
+		{
+			phy_linear_velocity_x += lengthdir_x(acceleration, moveDirection);
+			phy_linear_velocity_y += lengthdir_y(acceleration, moveDirection);
+		}
 		//physics_apply_force(phy_position_x, phy_position_y, horMove, verMove)
 	}
 	

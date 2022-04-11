@@ -19,5 +19,8 @@ enum attackType
 	shoot,
 	drawLight,
 	drawMedium,
-	drawHeavy
+	drawHeavy,
+	blockLeftLight,
+	blockLeftMedium,
+	blockLeftHeavy
 }
