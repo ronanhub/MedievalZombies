@@ -11,32 +11,35 @@ if (input = -1) //KEYBOARD
 	if (horMove != 0 || verMove != 0)
 	{
 		var moveDirection = point_direction(0, 0, horMove, verMove);
-		phy_position_x += lengthdir_x(moveSpeed, moveDirection);
-		phy_position_y += lengthdir_y(moveSpeed, moveDirection);
+		//phy_position_x += lengthdir_x(moveSpeed, moveDirection);
+		//phy_position_y += lengthdir_y(moveSpeed, moveDirection);
+		phy_linear_velocity_x = lengthdir_x(moveSpeed, moveDirection);
+		phy_linear_velocity_y = lengthdir_y(moveSpeed, moveDirection);
+		//physics_apply_force(phy_position_x, phy_position_y, horMove, verMove)
 	}
 	
 	///Turning
 
 	mouseDirection = point_direction(phy_position_x, phy_position_y, mouse_x, mouse_y);
-	var deltaDirection = mouseDirection-faceDirection;
+	var deltaDirection = mouseDirection-bodyDirection;
 	if (deltaDirection != 0)
 	{
 		if ((deltaDirection > 0 && deltaDirection < 180) || deltaDirection < -180)
 		{
-			faceDirection += min(rotateSpeed, abs(deltaDirection));
+			bodyDirection += min(rotateSpeed, abs(deltaDirection));
 		}
 		else
 		{
-			faceDirection -= min(rotateSpeed, abs(deltaDirection));
+			bodyDirection -= min(rotateSpeed, abs(deltaDirection));
 		}
 	}
 
-	while (faceDirection > 360)
+	while (bodyDirection > 360)
 	{
-		faceDirection -= 360;
+		bodyDirection -= 360;
 	}
-	while (faceDirection < 0)
+	while (bodyDirection < 0)
 	{
-		faceDirection += 360;
+		bodyDirection += 360;
 	}
 }

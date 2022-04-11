@@ -13,7 +13,11 @@ enum attackType
 	longswing,
 	longstab,
 	longoverhead,
-	cast,
-	
-	
+	castLight,
+	castMedium,
+	castHeavy,
+	shoot,
+	drawLight,
+	drawMedium,
+	drawHeavy
 }
