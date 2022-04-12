@@ -5,6 +5,9 @@ global.downKey = ord("S");
 global.leftKey = ord("A");
 global.rightKey = ord("D");
 
+global.attack1 = mb_left;
+global.attack2 = mb_right;
+
 enum attackType
 {
 	swing,
@@ -23,4 +26,13 @@ enum attackType
 	blockLeftLight,
 	blockLeftMedium,
 	blockLeftHeavy
+}
+
+enum states
+{
+	idle,
+	attack1,
+	attack2,
+	recover,
+	stun
 }
