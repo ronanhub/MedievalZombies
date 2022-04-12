@@ -9,4 +9,7 @@ reward = 5;
 state = states.idle;
 
 path = path_add();
-lookAheadDistance = 2;
+lookAheadDistance = 1;
+movementDirection = 0;
+lookDirection = 0;
+rotateSpeed = 3;

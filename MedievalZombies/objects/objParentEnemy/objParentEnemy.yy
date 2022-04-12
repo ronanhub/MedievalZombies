@@ -14,7 +14,7 @@
   "physicsGroup": 1,
   "physicsDensity": 5.0,
   "physicsRestitution": 0.1,
-  "physicsLinearDamping": 0.1,
+  "physicsLinearDamping": 3.0,
   "physicsAngularDamping": 0.1,
   "physicsFriction": 0.2,
   "physicsStartAwake": true,
@@ -26,6 +26,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
