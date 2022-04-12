@@ -172,3 +172,6 @@ if (weaponRotateLeft != 0)
 		}
 	}
 }
+
+global.playerX = phy_position_x;
+global.playerY = phy_position_y;

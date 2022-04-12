@@ -3,7 +3,7 @@
 input = -1;
 acceleration = 20;
 moveSpeed = 120;
-occupiedMoveSpeed = 0.25;
+occupiedMoveSpeed = 0.3;
 mouseDirection = 0;
 bodyDirection = 0;
 rotateSpeed = 9;
