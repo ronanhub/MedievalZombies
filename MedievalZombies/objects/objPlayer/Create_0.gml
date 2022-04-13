@@ -41,8 +41,10 @@ starterWeapon[? "spriteRight"] = sprEqSword;
 starterWeapon[? "spriteLeft"] = sprEqShield;
 starterWeapon[? "attack1Type"] = attackType.stab;
 starterWeapon[? "attack1Value"] = 25;
+starterWeapon[? "attack1Poise"] = 35;
 starterWeapon[? "attack2Type"] = attackType.blockLeftLight;
 starterWeapon[? "attack2Value"] = 50;
+starterWeapon[? "attack2Poise"] = 35;
 
 ds_list_add(weapons, starterWeapon);
 

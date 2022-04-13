@@ -22,3 +22,8 @@ draw_sprite_ext(weaponSpriteRight, -1, drawX+lengthdir_x(handOffset, weaponDirec
 
 draw_sprite_ext(bodySprite, -1, drawX, drawY, 1, 1, bodyDirection, c_white, 1);
 draw_sprite_ext(headSprite, -1, drawX, drawY, 1, 1, mouseDirection, c_white, 1);
+
+
+//debug collisions
+//Stab
+//draw_circle(phy_position_x + lengthdir_x(26, bodyDirection), phy_position_y + lengthdir_y(26, bodyDirection), 14, true)

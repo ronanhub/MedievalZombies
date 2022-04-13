@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"scrDamageMobs","path":"scripts/scrDamageMobs/scrDamageMobs.yy",},"order":1,},
     {"id":{"name":"sprSolid","path":"sprites/sprSolid/sprSolid.yy",},"order":0,},
     {"id":{"name":"objSolid","path":"objects/objSolid/objSolid.yy",},"order":1,},
     {"id":{"name":"objEnemyZombie","path":"objects/objEnemyZombie/objEnemyZombie.yy",},"order":1,},

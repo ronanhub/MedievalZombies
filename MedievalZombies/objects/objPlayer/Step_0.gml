@@ -129,14 +129,23 @@ if (weaponRotateRight != 0)
 			switch(currentAttack)
 			{
 				case attackType.swing:
-					state = states.recover;
 					weaponRotateRight = -75;
 					weaponRotateSpeedRight = 2;
+					state = states.recover;
 					break;
 				case attackType.stab:
-					state = states.recover;
 					weaponRotateRight = -85;
 					weaponRotateSpeedRight = 2;
+					//DAMAGE
+					if (state == states.attack2)
+					{
+						scrDamageMobs(currentAttack, bodyDirection, weapons[| currentWeapon][? "attack2Poise"],  weapons[| currentWeapon][? "attack2Value"]);
+					}
+					else
+					{
+						scrDamageMobs(currentAttack, bodyDirection, weapons[| currentWeapon][? "attack1Poise"],  weapons[| currentWeapon][? "attack1Value"]);
+					}
+					state = states.recover;
 					break;
 			}
 		}
