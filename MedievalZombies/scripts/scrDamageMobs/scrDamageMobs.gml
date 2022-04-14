@@ -6,7 +6,7 @@ function scrDamageMobs(type, attackDirection, dmgPoise, dmgPhysical){
 	switch(type)
 	{
 		case attackType.stab:
-			collision_circle_list(phy_position_x + lengthdir_x(26, attackDirection), phy_position_y + lengthdir_y(26, attackDirection), 14, objParentEnemy, true, true, tempList, true);
+			collision_circle_list(phy_position_x + lengthdir_x(28, attackDirection), phy_position_y + lengthdir_y(28, attackDirection), 14, objParentEnemy, true, true, tempList, true);
 			ds_list_copy(colliders, tempList);
 			break;
 	}

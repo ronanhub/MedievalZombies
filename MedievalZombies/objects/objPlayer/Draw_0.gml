@@ -26,4 +26,4 @@ draw_sprite_ext(headSprite, -1, drawX, drawY, 1, 1, mouseDirection, c_white, 1);
 
 //debug collisions
 //Stab
-//draw_circle(phy_position_x + lengthdir_x(26, bodyDirection), phy_position_y + lengthdir_y(26, bodyDirection), 14, true)
+//draw_circle(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 14, true)

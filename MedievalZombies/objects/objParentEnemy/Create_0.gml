@@ -32,4 +32,13 @@ function fnTakeDamage(dmgPoise, dmgPhysical)
 		}
 	}
 	hitpoints -= dmgPhysical;
+	
+	if (hitpoints <= 0)
+	{
+		if (instance_exists(objGameController))
+		{
+			objGameController.zombieKilled(id);
+		}
+		instance_destroy();
+	}
 }

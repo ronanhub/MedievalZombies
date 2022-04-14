@@ -12,6 +12,7 @@
     {"id":{"name":"tileMainTiles","path":"tilesets/tileMainTiles/tileMainTiles.yy",},"order":0,},
     {"id":{"name":"sprEnemyZombie1","path":"sprites/sprEnemyZombie1/sprEnemyZombie1.yy",},"order":0,},
     {"id":{"name":"sprKnightHead","path":"sprites/sprKnightHead/sprKnightHead.yy",},"order":1,},
+    {"id":{"name":"objGameController","path":"objects/objGameController/objGameController.yy",},"order":5,},
     {"id":{"name":"baMainTiles","path":"sprites/baMainTiles/baMainTiles.yy",},"order":0,},
     {"id":{"name":"sprEqSword","path":"sprites/sprEqSword/sprEqSword.yy",},"order":0,},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
