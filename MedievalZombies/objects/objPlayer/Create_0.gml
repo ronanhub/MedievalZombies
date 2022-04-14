@@ -16,6 +16,7 @@ maxMana = 100;
 Mana = maxMana;
 maxStamina = 100;
 Stamina = maxStamina;
+gold = 0;
 
 state = states.idle;
 

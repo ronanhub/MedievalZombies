@@ -51,6 +51,7 @@ enum states
 	idle,
 	attack1,
 	attack2,
+	lunge,
 	recover,
 	stun
 }

@@ -20,6 +20,13 @@ lookAheadDistance = 1;
 movementDirection = 0;
 lookDirection = 0;
 rotateSpeed = 3;
+attackDistance = 50;
+lungeTime = 7;
+lungeTimeLeft = lungeTime;
+lungeSpeed = 3;
+lungeDirection = 0;
+recoverTime = 35;
+recoverTimeLeft = recoverTime;
 
 function fnTakeDamage(dmgPoise, dmgPhysical)
 {
@@ -31,6 +38,7 @@ function fnTakeDamage(dmgPoise, dmgPhysical)
 			state = states.stun;
 		}
 	}
+	
 	hitpoints -= dmgPhysical;
 	
 	if (hitpoints <= 0)
@@ -39,6 +47,7 @@ function fnTakeDamage(dmgPoise, dmgPhysical)
 		{
 			objGameController.zombieKilled(id);
 		}
+		objPlayer.gold += reward;
 		instance_destroy();
 	}
 }
