@@ -8,6 +8,7 @@ switch(state)
 			state = states.lunge;
 			lungeDirection = point_direction(phy_position_x, phy_position_y, global.playerX, global.playerY);
 			lungeTimeLeft = lungeTime;
+			lookDirection = lungeDirection;
 		}
 		else if mp_grid_path(global.collisionGrid, path, phy_position_x, phy_position_y, global.playerX, global.playerY, true)
 		{
