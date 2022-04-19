@@ -5,6 +5,13 @@ defaultWaveString = "ZZZZZZZZZZ";
 waveString = "";
 zombies = ds_list_create();
 
+spawnPoints = ds_list_create();
+var spawnPointList = spawnPoints;
+with(objWaveSpawnPoint)
+{
+	ds_list_add(spawnPointList, id);
+}
+
 function getWave(ini, section, wave, defaultWave)
 {
 	ini_open(ini);
@@ -39,4 +46,10 @@ function startWaveSwitch()
 		wave++;
 		getWave("Level"+string(global.level)+"waves.ini", "DefaultWaves", wave, defaultWaveString);
 	}
+}
+
+function spawnEnemy(enemy)
+{
+	var spawnPoint = spawnPoints[| irandom(ds_list_size(spawnPoints)-1)];
+	instance_create_layer(spawnPoint.x, spawnPoint.y, "Instances", enemy);
 }

@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 input = -1;
-acceleration = 20;
-moveSpeed = 120;
-occupiedMoveSpeed = 0.3;
+acceleration = 24;
+moveSpeed = 140;
+occupiedMoveSpeed = 0.4;
 mouseDirection = 0;
 bodyDirection = 0;
 rotateSpeed = 9;

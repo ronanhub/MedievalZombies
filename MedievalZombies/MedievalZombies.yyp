@@ -22,6 +22,7 @@
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":0,},
     {"id":{"name":"sprCircleCollider","path":"sprites/sprCircleCollider/sprCircleCollider.yy",},"order":4,},
     {"id":{"name":"objParentEnemy","path":"objects/objParentEnemy/objParentEnemy.yy",},"order":0,},
+    {"id":{"name":"objWaveSpawnPoint","path":"objects/objWaveSpawnPoint/objWaveSpawnPoint.yy",},"order":9,},
     {"id":{"name":"sprKnightBody","path":"sprites/sprKnightBody/sprKnightBody.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
