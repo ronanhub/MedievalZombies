@@ -14,6 +14,8 @@ global.collisionGrid = mp_grid_create(0,0, room_width div cellSize, room_height 
 global.playerX = 32;
 global.playerY = 32;
 
+global.uiscale = 100;
+
 for(var xx = 0; xx < room_width div cellSize; xx++)
 {
 	for(var yy = 0; yy < room_height div cellSize; yy++)

@@ -11,11 +11,11 @@ rotateSpeed = 9;
 
 //stats
 maxHitpoints = 100;
-Hitpoints = maxHitpoints;
+hitpoints = maxHitpoints;
 maxMana = 100;
-Mana = maxMana;
+mana = maxMana;
 maxStamina = 100;
-Stamina = maxStamina;
+stamina = maxStamina;
 gold = 0;
 
 state = states.idle;
