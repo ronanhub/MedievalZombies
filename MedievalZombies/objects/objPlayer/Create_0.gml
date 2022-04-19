@@ -8,6 +8,7 @@ mouseDirection = 0;
 bodyDirection = 0;
 rotateSpeed = 9;
 
+currentInteraction = noone;
 
 //stats
 maxHitpoints = 100;

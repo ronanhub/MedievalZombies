@@ -1,9 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.level = 1;
+
 global.upKey = ord("W");
 global.downKey = ord("S");
 global.leftKey = ord("A");
 global.rightKey = ord("D");
+
+global.interactKey = ord("E");
 
 global.attack1 = mb_left;
 global.attack2 = mb_right;

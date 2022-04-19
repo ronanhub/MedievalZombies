@@ -27,6 +27,15 @@ if (input = -1) //KEYBOARD
 			}
 			//physics_apply_force(phy_position_x, phy_position_y, horMove, verMove)
 		}
+		
+		//Interacting
+		if keyboard_check_pressed(global.interactKey)
+		{
+			if (instance_exists(currentInteraction))
+			{
+				currentInteraction.activateInteraction();
+			}
+		}
 	}
 	
 	///Turning
