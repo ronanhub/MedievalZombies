@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-if place_meeting(x, y, objPlayer)
+if (active)
 {
-	objPlayer.currentInteraction = id;
+	if place_meeting(x, y, objPlayer)
+	{
+		objPlayer.currentInteraction = id;
+	}
 }

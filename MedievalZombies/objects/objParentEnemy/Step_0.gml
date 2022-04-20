@@ -39,7 +39,7 @@ switch(state)
 		}
 		break;
 	case states.recover:
-		recoverTimeLeft--;
+		recoverTimeLeft -= poiseRecovery;
 		if (recoverTimeLeft <= 0)
 		{
 			state = states.idle;

@@ -9,4 +9,8 @@ function activateInteraction()
 	{
 		objGameController.startWaveSwitch();
 	}
+	with(objStartGameSwitch)
+	{
+		active = false;
+	}
 }

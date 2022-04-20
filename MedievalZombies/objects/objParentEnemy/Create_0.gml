@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-maxHitpoints = 100;
+maxHitpoints = 50;
 hitpoints = maxHitpoints;
 
 maxPoise = 100;
@@ -9,7 +9,7 @@ stunPoiseRecovery = 3;
 poise = 0;
 
 allowCritical = false;
-movementSpeed = 0.8;
+movementSpeed = 0.7;
 damage = 5;
 cooldown = 25;
 reward = 5;
@@ -20,10 +20,10 @@ lookAheadDistance = 1;
 movementDirection = 0;
 lookDirection = 0;
 rotateSpeed = 3;
-attackDistance = 50;
+attackDistance = 40;
 lungeTime = 7;
 lungeTimeLeft = lungeTime;
-lungeSpeed = 3;
+lungeSpeed = 2;
 lungeDirection = 0;
 recoverTime = 45;
 recoverTimeLeft = recoverTime;

@@ -1,4 +1,0 @@
-[DefaultWaves]
-Wave1 = "ZZZZZ"
-Wave2 = "ZZZZZZZZ"
-Wave2 = "ZZAZZZAZZ"

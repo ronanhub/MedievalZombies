@@ -85,12 +85,12 @@ if (input = -1) //KEYBOARD
 				case attackType.swing:
 					state = stateToGoTo;
 					weaponRotateRight = 75;
-					weaponRotateSpeedRight = 12;
+					weaponRotateSpeedRight = 20;
 					break;
 				case attackType.stab:
 					state = stateToGoTo;
 					weaponRotateRight = 85;
-					weaponRotateSpeedRight = 12;
+					weaponRotateSpeedRight = 20;
 					break;
 				case attackType.blockLeftLight:
 					state = stateToGoTo;
@@ -139,12 +139,12 @@ if (weaponRotateRight != 0)
 			{
 				case attackType.swing:
 					weaponRotateRight = -75;
-					weaponRotateSpeedRight = 2;
+					weaponRotateSpeedRight = 4;
 					state = states.recover;
 					break;
 				case attackType.stab:
 					weaponRotateRight = -85;
-					weaponRotateSpeedRight = 2;
+					weaponRotateSpeedRight = 4;
 					//DAMAGE
 					if (state == states.attack2)
 					{

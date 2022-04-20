@@ -4,6 +4,7 @@
     {"id":{"name":"sprSolid","path":"sprites/sprSolid/sprSolid.yy",},"order":0,},
     {"id":{"name":"objSolid","path":"objects/objSolid/objSolid.yy",},"order":1,},
     {"id":{"name":"objEnemyZombie","path":"objects/objEnemyZombie/objEnemyZombie.yy",},"order":1,},
+    {"id":{"name":"objEnemyZombieArmoured","path":"objects/objEnemyZombieArmoured/objEnemyZombieArmoured.yy",},"order":2,},
     {"id":{"name":"sprEqShield","path":"sprites/sprEqShield/sprEqShield.yy",},"order":1,},
     {"id":{"name":"baGrass","path":"sprites/baGrass/baGrass.yy",},"order":0,},
     {"id":{"name":"sprKnightFoot","path":"sprites/sprKnightFoot/sprKnightFoot.yy",},"order":2,},
@@ -14,6 +15,7 @@
     {"id":{"name":"objStartGameSwitch","path":"objects/objStartGameSwitch/objStartGameSwitch.yy",},"order":1,},
     {"id":{"name":"sprEnemyZombie1","path":"sprites/sprEnemyZombie1/sprEnemyZombie1.yy",},"order":0,},
     {"id":{"name":"foInteract","path":"fonts/foInteract/foInteract.yy",},"order":0,},
+    {"id":{"name":"sprEnemyZombieArmoured","path":"sprites/sprEnemyZombieArmoured/sprEnemyZombieArmoured.yy",},"order":1,},
     {"id":{"name":"sprKnightHead","path":"sprites/sprKnightHead/sprKnightHead.yy",},"order":1,},
     {"id":{"name":"objInteractableParent","path":"objects/objInteractableParent/objInteractableParent.yy",},"order":0,},
     {"id":{"name":"objGameController","path":"objects/objGameController/objGameController.yy",},"order":5,},
@@ -71,7 +73,7 @@
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
-    {"CopyToMask":3035461389054378222,"filePath":"datafiles","resourceVersion":"1.0","name":"Level1Waves.ini.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Level1Waves.ini","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.6.595",

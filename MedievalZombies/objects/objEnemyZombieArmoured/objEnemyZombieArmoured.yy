@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "sprEnemyZombie1",
-    "path": "sprites/sprEnemyZombie1/sprEnemyZombie1.yy",
+    "name": "sprEnemyZombieArmoured",
+    "path": "sprites/sprEnemyZombieArmoured/sprEnemyZombieArmoured.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "objParentEnemy",
+    "path": "objects/objParentEnemy/objParentEnemy.yy",
+  },
   "physicsObject": true,
   "physicsSensor": false,
   "physicsShape": 0,
@@ -21,12 +24,10 @@
   "physicsKinematic": false,
   "physicsShapePoints": [
     {"x":16.0,"y":16.0,},
-    {"x":12.0,"y":16.0,},
+    {"x":16.0,"y":16.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -35,7 +36,7 @@
     "path": "folders/Objects/enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objParentEnemy",
+  "name": "objEnemyZombieArmoured",
   "tags": [],
   "resourceType": "GMObject",
 }

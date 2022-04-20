@@ -31,7 +31,7 @@ function zombieKilled(zombie)
 function startWaves()
 {
 	wave = 1;
-	getWave("Level"+string(global.level)+"waves.ini", "DefaultWaves", wave, defaultWaveString);
+	getWave("Level"+string(global.level)+"Waves.ini", "DefaultWaves", wave, defaultWaveString);
 	alarm[0] = room_speed * 2;
 }
 
@@ -44,12 +44,13 @@ function startWaveSwitch()
 	else if waveString == "" && ds_list_size(zombies) == 0
 	{
 		wave++;
-		getWave("Level"+string(global.level)+"waves.ini", "DefaultWaves", wave, defaultWaveString);
+		getWave("Level"+string(global.level)+"Waves.ini", "DefaultWaves", wave, defaultWaveString);
 	}
 }
 
 function spawnEnemy(enemy)
 {
 	var spawnPoint = spawnPoints[| irandom(ds_list_size(spawnPoints)-1)];
-	instance_create_layer(spawnPoint.x, spawnPoint.y, "Instances", enemy);
+	var newZombie = instance_create_layer(spawnPoint.x, spawnPoint.y, "Instances", enemy);
+	ds_list_add(zombies, newZombie);
 }
