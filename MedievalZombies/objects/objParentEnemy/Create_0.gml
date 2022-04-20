@@ -9,7 +9,7 @@ stunPoiseRecovery = 3;
 poise = 0;
 
 allowCritical = false;
-movementSpeed = 0.7;
+movementSpeed = 0.6;
 damage = 5;
 cooldown = 25;
 reward = 5;
