@@ -59,6 +59,7 @@ starterWeapon[? "attack1Stamina"] = 12;
 starterWeapon[? "attack2Type"] = attackType.blockLeftLight;
 starterWeapon[? "attack2Value"] = 50;
 starterWeapon[? "attack2Stamina"] = 17;
+starterWeapon[? "uiSprite"] = sprUiSwordShield;
 
 ds_list_add(weapons, starterWeapon);
 

@@ -18,7 +18,13 @@ global.collisionGrid = mp_grid_create(0,0, room_width div cellSize, room_height 
 global.playerX = 32;
 global.playerY = 32;
 
-global.uiscale = 100;
+global.uiScale = 100;
+global.uiHeight = display_get_gui_height();
+global.uiWidth = display_get_gui_width();
+global.uiBottom = global.uiHeight-1;
+global.uiRight = global.uiWidth-1;
+global.uiXMiddle = global.uiWidth/2;
+global.uiYMiddle = global.uiHeight/2;
 
 for(var xx = 0; xx < room_width div cellSize; xx++)
 {

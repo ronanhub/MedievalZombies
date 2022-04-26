@@ -13,6 +13,7 @@
     {"id":{"name":"scrWave","path":"scripts/scrWave/scrWave.yy",},"order":0,},
     {"id":{"name":"tileMainTiles","path":"tilesets/tileMainTiles/tileMainTiles.yy",},"order":0,},
     {"id":{"name":"objStartGameSwitch","path":"objects/objStartGameSwitch/objStartGameSwitch.yy",},"order":1,},
+    {"id":{"name":"sprUiSwordShield","path":"sprites/sprUiSwordShield/sprUiSwordShield.yy",},"order":0,},
     {"id":{"name":"sprEnemyZombie1","path":"sprites/sprEnemyZombie1/sprEnemyZombie1.yy",},"order":0,},
     {"id":{"name":"foInteract","path":"fonts/foInteract/foInteract.yy",},"order":0,},
     {"id":{"name":"sprEnemyZombieArmoured","path":"sprites/sprEnemyZombieArmoured/sprEnemyZombieArmoured.yy",},"order":1,},
@@ -65,6 +66,7 @@
     {"folderPath":"folders/Sprites/enemies.yy","order":3,"resourceVersion":"1.0","name":"enemies","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/enemies.yy","order":4,"resourceVersion":"1.0","name":"enemies","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/interactables.yy","order":8,"resourceVersion":"1.0","name":"interactables","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/weapons/uiSprites.yy","order":2,"resourceVersion":"1.0","name":"uiSprites","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
