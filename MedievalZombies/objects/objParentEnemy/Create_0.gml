@@ -25,7 +25,7 @@ lungeTime = 7;
 lungeTimeLeft = lungeTime;
 lungeSpeed = 2;
 lungeDirection = 0;
-recoverTime = 45;
+recoverTime = 55;
 recoverTimeLeft = recoverTime;
 
 function fnTakeDamage(dmgPoise, dmgPhysical)

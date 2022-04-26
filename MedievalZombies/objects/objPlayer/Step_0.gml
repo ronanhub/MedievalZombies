@@ -63,18 +63,20 @@ if (input = -1) //KEYBOARD
 	}
 	
 	///attacking
-	if (state == states.idle)
+	if (state == states.idle && stamina > 0)
 	{
 		var stateToGoTo = noone;
 		if mouse_check_button(global.attack1)
 		{
 			currentAttack = weapons[| currentWeapon][? "attack1Type"];
+			currentAttackStamina = weapons[| currentWeapon][? "attack1Stamina"];
 			stateToGoTo = states.attack1;
 			currentAttackButton = global.attack1;
 		}
 		else if mouse_check_button(global.attack2)
 		{
 			currentAttack = weapons[| currentWeapon][? "attack2Type"];
+			currentAttackStamina = weapons[| currentWeapon][? "attack2Stamina"];
 			stateToGoTo = states.attack2;
 			currentAttackButton = global.attack2;
 		}
@@ -86,11 +88,13 @@ if (input = -1) //KEYBOARD
 					state = stateToGoTo;
 					weaponRotateRight = 75;
 					weaponRotateSpeedRight = 20;
+					drainStamina(currentAttackStamina);
 					break;
 				case attackType.stab:
 					state = stateToGoTo;
 					weaponRotateRight = 85;
 					weaponRotateSpeedRight = 20;
+					drainStamina(currentAttackStamina);
 					break;
 				case attackType.blockLeftLight:
 					state = stateToGoTo;
@@ -188,6 +192,15 @@ if (weaponRotateLeft != 0)
 					break;
 			}
 		}
+	}
+}
+
+if (staminaRegenerating && stamina < maxStamina)
+{
+	stamina += staminaRegen;
+	if (stamina > maxStamina)
+	{
+		stamina = maxStamina;
 	}
 }
 

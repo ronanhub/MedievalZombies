@@ -11,19 +11,30 @@ rotateSpeed = 9;
 currentInteraction = noone;
 
 //stats
+gold = 0;
 maxHitpoints = 100;
 hitpoints = maxHitpoints;
 maxMana = 100;
 mana = maxMana;
 maxStamina = 100;
 stamina = maxStamina;
-gold = 0;
+staminaRegen = 0.5;
+staminaRegenerating = true;
+staminaRegenTime = 60;
+function drainStamina(amount)
+{
+	stamina -= amount;
+	staminaRegenerating = false;
+	alarm[0] = staminaRegenTime;
+}
+
 
 state = states.idle;
 
 //weapons
 currentWeapon = 0;
 currentAttack = attackType.stab;
+currentAttackStamina = 0;
 currentAttackButton = mb_left;
 
 weaponRotationLeft = 0;
@@ -44,9 +55,10 @@ starterWeapon[? "spriteLeft"] = sprEqShield;
 starterWeapon[? "attack1Type"] = attackType.stab;
 starterWeapon[? "attack1Value"] = 25;
 starterWeapon[? "attack1Poise"] = 35;
+starterWeapon[? "attack1Stamina"] = 12;
 starterWeapon[? "attack2Type"] = attackType.blockLeftLight;
 starterWeapon[? "attack2Value"] = 50;
-starterWeapon[? "attack2Poise"] = 35;
+starterWeapon[? "attack2Stamina"] = 17;
 
 ds_list_add(weapons, starterWeapon);
 
