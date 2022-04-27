@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "objInteractableParent",
-    "path": "objects/objInteractableParent/objInteractableParent.yy",
+    "name": "objWeaponShop",
+    "path": "objects/objWeaponShop/objWeaponShop.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/interactables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objWeaponShop",
+  "name": "objWeaponSwordShield",
   "tags": [],
   "resourceType": "GMObject",
 }
