@@ -11,9 +11,11 @@ weaponForSale[? "attack1Type"] = attackType.stab;
 weaponForSale[? "attack1Value"] = 25;
 weaponForSale[? "attack1Poise"] = 35;
 weaponForSale[? "attack1Stamina"] = 12;
+weaponForSale[? "attack1Mana"] = 0;
 weaponForSale[? "attack2Type"] = attackType.blockLeftLight;
 weaponForSale[? "attack2Value"] = 50;
 weaponForSale[? "attack2Stamina"] = 17;
+weaponForSale[? "attack2Mana"] = 0;
 weaponForSale[? "uiSprite"] = sprUiSwordShield;
 display = noone;
 
@@ -24,6 +26,7 @@ function activateInteraction()
 		if (ds_list_size(objPlayer.weapons) < 3)
 		{
 			ds_list_add(objPlayer.weapons, weaponForSale);
+			objPlayer.gold -= price;
 		}
 		else
 		{

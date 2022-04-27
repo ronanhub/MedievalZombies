@@ -17,7 +17,7 @@ if (leftWeapon < 0)
 var rightWeapon = currentWeapon+1;
 if (rightWeapon > 2)
 {
-	leftWeapon = 0;
+	rightWeapon = 0;
 }
 var boxSize = global.uiScale*.7;
 var smallBoxSize = global.uiScale*.56;
@@ -35,8 +35,18 @@ draw_rectangle(global.uiXMiddle+boxSize+3, global.uiBottom-2*smallBoxSize+2, glo
 //middle item
 var weaponToDraw = weapons[| currentWeapon];
 draw_sprite_ext(weaponToDraw[? "uiSprite"], 0, global.uiXMiddle, global.uiBottom - boxSize, weaponScale, weaponScale, 0, c_white, 1);
-draw_sprite_ext(weaponToDraw[? "uiSprite"], 0, global.uiXMiddle-boxSize-smallBoxSize, global.uiBottom - smallBoxSize, smallWeaponScale, smallWeaponScale, 0, c_white, 1);
-draw_sprite_ext(weaponToDraw[? "uiSprite"], 0, global.uiXMiddle+boxSize+smallBoxSize, global.uiBottom - smallBoxSize, smallWeaponScale, smallWeaponScale, 0, c_white, 1);
+//left item
+if leftWeapon < ds_list_size(weapons)
+{
+	weaponToDraw = weapons[| leftWeapon];
+	draw_sprite_ext(weaponToDraw[? "uiSprite"], 0, global.uiXMiddle-boxSize-smallBoxSize, global.uiBottom - smallBoxSize, smallWeaponScale, smallWeaponScale, 0, c_white, 1);
+}
+//right item
+if rightWeapon < ds_list_size(weapons)
+{
+	weaponToDraw = weapons[| rightWeapon];
+	draw_sprite_ext(weaponToDraw[? "uiSprite"], 0, global.uiXMiddle+boxSize+smallBoxSize, global.uiBottom - smallBoxSize, smallWeaponScale, smallWeaponScale, 0, c_white, 1);
+}
 
 if (instance_exists(currentInteraction))
 {

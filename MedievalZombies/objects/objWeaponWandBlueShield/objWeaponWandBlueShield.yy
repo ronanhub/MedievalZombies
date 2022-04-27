@@ -33,7 +33,7 @@
     "path": "folders/Objects/interactables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objWeaponSwordShield",
+  "name": "objWeaponWandBlueShield",
   "tags": [],
   "resourceType": "GMObject",
 }

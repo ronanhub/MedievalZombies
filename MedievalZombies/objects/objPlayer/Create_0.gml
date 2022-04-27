@@ -11,7 +11,7 @@ rotateSpeed = 9;
 currentInteraction = noone;
 
 //stats
-gold = 0;
+gold = 1110;
 maxHitpoints = 100;
 hitpoints = maxHitpoints;
 maxMana = 100;
@@ -27,7 +27,6 @@ function drainStamina(amount)
 	staminaRegenerating = false;
 	alarm[0] = staminaRegenTime;
 }
-
 
 state = states.idle;
 
@@ -56,9 +55,11 @@ starterWeapon[? "attack1Type"] = attackType.stab;
 starterWeapon[? "attack1Value"] = 25;
 starterWeapon[? "attack1Poise"] = 35;
 starterWeapon[? "attack1Stamina"] = 12;
+starterWeapon[? "attack1Mana"] = 0;
 starterWeapon[? "attack2Type"] = attackType.blockLeftLight;
 starterWeapon[? "attack2Value"] = 50;
 starterWeapon[? "attack2Stamina"] = 17;
+starterWeapon[? "attack2Mana"] = 0;
 starterWeapon[? "uiSprite"] = sprUiSwordShield;
 
 ds_list_add(weapons, starterWeapon);

@@ -107,19 +107,43 @@ if (input = -1) //KEYBOARD
 	}
 	else if (state == states.attack1 || state == states.attack2)
 	{
-			switch(currentAttack)
-			{
-				case attackType.blockLeftLight:
-					if (mouse_check_button_released(currentAttackButton))
-					{
-						weaponRotateLeft = 85;
-						weaponRotateSpeedLeft = 25;
-						weaponAngleLeft = 0;
-						state = states.recover;
-					}
+		switch(currentAttack)
+		{
+			case attackType.blockLeftLight:
+				if (mouse_check_button_released(currentAttackButton))
+				{
+					weaponRotateLeft = 85;
+					weaponRotateSpeedLeft = 25;
+					weaponAngleLeft = 0;
+					state = states.recover;
+				}
 					
-					break;
-			}
+				break;
+		}
+	}
+	
+	//switching weapons
+	if mouse_wheel_up()
+	{
+		if (currentWeapon < (ds_list_size(weapons)-1))
+		{
+			currentWeapon++;
+		}
+		else
+		{
+			currentWeapon = 0;
+		}
+	}
+	else if mouse_wheel_down()
+	{
+		if (currentWeapon > 0)
+		{
+			currentWeapon--;
+		}
+		else
+		{
+			currentWeapon = ds_list_size(weapons)-1;
+		}
 	}
 }
 

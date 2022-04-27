@@ -10,3 +10,5 @@ maxPoise = 40;
 poiseRecovery = 1;
 stunPoiseRecovery = 1;
 recoverTime = 50;
+
+reward = 15;
