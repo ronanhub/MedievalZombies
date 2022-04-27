@@ -9,7 +9,7 @@ function drawInteraction()
 	draw_set_colour(textColour);
 	draw_set_font(foInteract);
 	draw_set_halign(fa_middle);
-	draw_text(display_get_gui_width()/2, display_get_gui_height()*0.8, text);
+	draw_text(display_get_gui_width()/2, display_get_gui_height()*0.7, text);
 }
 
 function activateInteraction()
