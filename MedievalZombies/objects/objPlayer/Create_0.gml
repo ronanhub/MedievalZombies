@@ -86,7 +86,9 @@ function castSpell(spellX, spellY, spellVelocity, spellDirection, spellSprite, s
 	spell.spellVelocity = spellVelocity;
 	spell.spellSprite = spellSprite;
 	spell.spellSubimg = spellSubimg;
-	spell.image_xscale = spellScale;
+	spell.image_xscale = .02;
+	spell.image_yscale = .02;
+	spell.spellScale = spellScale;
 	spell.spellDirection = spellDirection;
 	spell.spellColour = spellColour;
 	spell.spellAlpha = spellAlpha;
@@ -100,3 +102,9 @@ footSprite = sprKnightFoot;
 headSprite = sprKnightHead;
 weaponSpriteLeft = weapons[| currentWeapon][? "spriteLeft"];
 weaponSpriteRight = weapons[| currentWeapon][? "spriteRight"];
+
+function updateWeaponSprite()
+{
+	weaponSpriteLeft = weapons[| currentWeapon][? "spriteLeft"];
+	weaponSpriteRight = weapons[| currentWeapon][? "spriteRight"];
+}

@@ -145,6 +145,7 @@ if (input = -1) //KEYBOARD
 			{
 				currentWeapon = 0;
 			}
+			updateWeaponSprite();
 		}
 		else if mouse_wheel_down()
 		{
@@ -156,6 +157,7 @@ if (input = -1) //KEYBOARD
 			{
 				currentWeapon = ds_list_size(weapons)-1;
 			}
+			updateWeaponSprite();
 		}
 	}
 }
@@ -200,7 +202,8 @@ if (weaponRotateRight != 0)
 				case attackType.castLight:
 					weaponRotateRight = -85;
 					weaponRotateSpeedRight = 4;
-					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_x(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"]);
+					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"]);
+					state = states.recover;
 					break;
 			}
 		}
@@ -224,13 +227,19 @@ if (weaponRotateLeft != 0)
 			{
 				case attackType.swing:
 					state = states.recover;
-					weaponRotateLeft = -75;
+					weaponRotateLeft = 75;
 					weaponRotateSpeedLeft = 2;
 					break;
 				case attackType.stab:
 					state = states.recover;
-					weaponRotateLeft = -85;
+					weaponRotateLeft = 85;
 					weaponRotateSpeedLeft = 2;
+					break;
+				case attackType.castLight:
+					weaponRotateRight = 85;
+					weaponRotateSpeedRight = 4;
+					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"]);
+					state = states.recover;
 					break;
 			}
 		}
@@ -243,6 +252,14 @@ if (staminaRegenerating && stamina < maxStamina)
 	if (stamina > maxStamina)
 	{
 		stamina = maxStamina;
+	}
+}
+if (manaRegenerating && mana < maxMana)
+{
+	mana += manaRegen;
+	if (mana > maxMana)
+	{
+		mana = maxMana;
 	}
 }
 
