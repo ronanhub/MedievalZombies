@@ -202,7 +202,15 @@ if (weaponRotateRight != 0)
 				case attackType.castLight:
 					weaponRotateRight = -85;
 					weaponRotateSpeedRight = 4;
-					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"]);
+					//CAST
+					if (state == states.attack2)
+					{
+						castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, -1, 0.7, c_blue, 1, false, weapons[| currentWeapon][? "attack2Value"], weapons[| currentWeapon][? "attack2Poise"]);
+					}
+					else
+					{
+						castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, -1, 0.7, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"], weapons[| currentWeapon][? "attack1Poise"]);
+					}
 					state = states.recover;
 					break;
 			}
@@ -238,7 +246,7 @@ if (weaponRotateLeft != 0)
 				case attackType.castLight:
 					weaponRotateRight = 85;
 					weaponRotateSpeedRight = 4;
-					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"]);
+					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_y(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"], weapons[| currentWeapon][? "attack1Poise"]);
 					state = states.recover;
 					break;
 			}

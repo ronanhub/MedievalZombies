@@ -80,11 +80,11 @@ starterWeapon[? "uiSprite"] = sprUiSwordShield;
 
 ds_list_add(weapons, starterWeapon);
 
-function castSpell(spellX, spellY, spellVelocity, spellDirection, spellSprite, spellSubimg, spellScale, spellColour, spellAlpha, passThrough, damage)
+function castSpell(spellX, spellY, spellVelocity, spellDirection, spellSprite, spellSubimg, spellScale, spellColour, spellAlpha, passThrough, damage, poise)
 {
 	var spell = instance_create_layer(spellX, spellY, layer, objSpell);
 	spell.spellVelocity = spellVelocity;
-	spell.spellSprite = spellSprite;
+	spell.sprite_index = spellSprite;
 	spell.spellSubimg = spellSubimg;
 	spell.image_xscale = .02;
 	spell.image_yscale = .02;
@@ -94,6 +94,7 @@ function castSpell(spellX, spellY, spellVelocity, spellDirection, spellSprite, s
 	spell.spellAlpha = spellAlpha;
 	spell.passThrough = passThrough;
 	spell.damage = damage;
+	spell.poise = poise;
 }
 
 //visuals
