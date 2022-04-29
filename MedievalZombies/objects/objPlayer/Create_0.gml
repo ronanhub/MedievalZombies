@@ -16,6 +16,9 @@ maxHitpoints = 100;
 hitpoints = maxHitpoints;
 maxMana = 100;
 mana = maxMana;
+manaRegen = 0.1;
+manaRegenerating = true;
+manaRegenTime = 120;
 maxStamina = 100;
 stamina = maxStamina;
 staminaRegen = 0.5;
@@ -23,9 +26,21 @@ staminaRegenerating = true;
 staminaRegenTime = 60;
 function drainStamina(amount)
 {
-	stamina -= amount;
-	staminaRegenerating = false;
-	alarm[0] = staminaRegenTime;
+	if (amount > 0)
+	{
+		stamina -= amount;
+		staminaRegenerating = false;
+		alarm[0] = staminaRegenTime;
+	}
+}
+function drainMana(amount)
+{
+	if (amount > 0)
+	{
+		mana -= amount;
+		manaRegenerating = false;
+		alarm[1] = manaRegenTime;
+	}
 }
 
 state = states.idle;
@@ -34,6 +49,7 @@ state = states.idle;
 currentWeapon = 0;
 currentAttack = attackType.stab;
 currentAttackStamina = 0;
+currentAttackMana = 0;
 currentAttackButton = mb_left;
 
 weaponRotationLeft = 0;
@@ -64,6 +80,19 @@ starterWeapon[? "uiSprite"] = sprUiSwordShield;
 
 ds_list_add(weapons, starterWeapon);
 
+function castSpell(spellX, spellY, spellVelocity, spellDirection, spellSprite, spellSubimg, spellScale, spellColour, spellAlpha, passThrough, damage)
+{
+	var spell = instance_create_layer(spellX, spellY, layer, objSpell);
+	spell.spellVelocity = spellVelocity;
+	spell.spellSprite = spellSprite;
+	spell.spellSubimg = spellSubimg;
+	spell.image_xscale = spellScale;
+	spell.spellDirection = spellDirection;
+	spell.spellColour = spellColour;
+	spell.spellAlpha = spellAlpha;
+	spell.passThrough = passThrough;
+	spell.damage = damage;
+}
 
 //visuals
 bodySprite = sprKnightBody;

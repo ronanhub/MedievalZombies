@@ -66,17 +66,19 @@ if (input = -1) //KEYBOARD
 	if (state == states.idle && stamina > 0)
 	{
 		var stateToGoTo = noone;
-		if mouse_check_button(global.attack1)
+		if (mouse_check_button(global.attack1)  && mana > weapons[| currentWeapon][? "attack1Mana"])
 		{
 			currentAttack = weapons[| currentWeapon][? "attack1Type"];
 			currentAttackStamina = weapons[| currentWeapon][? "attack1Stamina"];
+			currentAttackMana = weapons[| currentWeapon][? "attack1Mana"];
 			stateToGoTo = states.attack1;
 			currentAttackButton = global.attack1;
 		}
-		else if mouse_check_button(global.attack2)
+		else if (mouse_check_button(global.attack2)  && mana > weapons[| currentWeapon][? "attack2Mana"])
 		{
 			currentAttack = weapons[| currentWeapon][? "attack2Type"];
 			currentAttackStamina = weapons[| currentWeapon][? "attack2Stamina"];
+			currentAttackMana = weapons[| currentWeapon][? "attack2Mana"];
 			stateToGoTo = states.attack2;
 			currentAttackButton = global.attack2;
 		}
@@ -89,12 +91,21 @@ if (input = -1) //KEYBOARD
 					weaponRotateRight = 75;
 					weaponRotateSpeedRight = 20;
 					drainStamina(currentAttackStamina);
+					drainMana(currentAttackMana);
 					break;
 				case attackType.stab:
 					state = stateToGoTo;
 					weaponRotateRight = 85;
 					weaponRotateSpeedRight = 20;
 					drainStamina(currentAttackStamina);
+					drainMana(currentAttackMana);
+					break;
+				case attackType.castLight:
+					state = stateToGoTo;
+					weaponRotateRight = 85;
+					weaponRotateSpeedRight = 20;
+					drainStamina(currentAttackStamina);
+					drainMana(currentAttackMana);
 					break;
 				case attackType.blockLeftLight:
 					state = stateToGoTo;
@@ -117,32 +128,34 @@ if (input = -1) //KEYBOARD
 					weaponAngleLeft = 0;
 					state = states.recover;
 				}
-					
 				break;
 		}
 	}
 	
 	//switching weapons
-	if mouse_wheel_up()
+	if state == states.idle
 	{
-		if (currentWeapon < (ds_list_size(weapons)-1))
+		if mouse_wheel_up()
 		{
-			currentWeapon++;
+			if (currentWeapon < (ds_list_size(weapons)-1))
+			{
+				currentWeapon++;
+			}
+			else
+			{
+				currentWeapon = 0;
+			}
 		}
-		else
+		else if mouse_wheel_down()
 		{
-			currentWeapon = 0;
-		}
-	}
-	else if mouse_wheel_down()
-	{
-		if (currentWeapon > 0)
-		{
-			currentWeapon--;
-		}
-		else
-		{
-			currentWeapon = ds_list_size(weapons)-1;
+			if (currentWeapon > 0)
+			{
+				currentWeapon--;
+			}
+			else
+			{
+				currentWeapon = ds_list_size(weapons)-1;
+			}
 		}
 	}
 }
@@ -183,6 +196,11 @@ if (weaponRotateRight != 0)
 						scrDamageMobs(currentAttack, bodyDirection, weapons[| currentWeapon][? "attack1Poise"],  weapons[| currentWeapon][? "attack1Value"]);
 					}
 					state = states.recover;
+					break;
+				case attackType.castLight:
+					weaponRotateRight = -85;
+					weaponRotateSpeedRight = 4;
+					castSpell(phy_position_x + lengthdir_x(28, bodyDirection), phy_position_y + lengthdir_x(28, bodyDirection), 5, bodyDirection, sprSpellBall, 0.5, 0.5, c_blue, 1, false, weapons[| currentWeapon][? "attack1Value"]);
 					break;
 			}
 		}
